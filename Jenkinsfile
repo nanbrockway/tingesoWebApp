@@ -11,7 +11,7 @@ pipeline {
         steps { sh 'npm run-script lint' }
     }
 
-    stage('Unit tests') {
+    stage('Unit tests & build') {
         steps { sh 'npm run-script citest' }
     }
 
