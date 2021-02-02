@@ -6,7 +6,6 @@ pipeline {
       steps { sh 'npm install' }
     }
 
-
     stage('Static code analysis') {
         steps { sh 'npm run-script lint' }
     }
@@ -15,6 +14,9 @@ pipeline {
         steps { sh 'npm run-script citest' }
     }
 
+    stage('Build') {
+      steps { sh 'npm run-script build' }
+    }
     // stage('Test') {
     //   parallel {
     //     stage('Static code analysis') {
@@ -26,8 +28,5 @@ pipeline {
     //   }
     // }
 
-    // stage('Build') {
-    //   steps { sh 'npm run-script build' }
-    // }
   }
 }
