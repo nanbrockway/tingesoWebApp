@@ -11,9 +11,9 @@ pipeline {
         steps { bat 'npm run-script lint' }
     }
 
-    stage('Unit tests') {
-        steps { bat 'npm run-script test' }
-    }
+    // stage('Unit tests') {
+    //     steps { bat 'npm run-script test' }
+    // }
 
     // stage('Test') {
     //   parallel {
