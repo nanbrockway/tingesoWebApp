@@ -11,6 +11,8 @@ pipeline {
     }
 
 
+//esto es un cambio inofensivo
+
     stage('Unit tests') {
         steps { sh 'npm run-script citest' }
     }
