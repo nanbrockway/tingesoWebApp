@@ -11,9 +11,9 @@ pipeline {
         steps { sh 'npm run-script lint' }
     }
 
-    // stage('Unit tests') {
-    //     steps { sh 'npm run-script test' }
-    // }
+    stage('Unit tests') {
+        steps { sh 'npm run-script citest' }
+    }
 
     // stage('Test') {
     //   parallel {
@@ -26,8 +26,8 @@ pipeline {
     //   }
     // }
 
-    stage('Build') {
-      steps { sh 'npm run-script build' }
-    }
+    // stage('Build') {
+    //   steps { sh 'npm run-script build' }
+    // }
   }
 }

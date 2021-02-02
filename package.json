@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "citest": "ng test --code-coverage && ng build --prod --no-progress",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
