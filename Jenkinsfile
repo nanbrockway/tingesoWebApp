@@ -3,31 +3,31 @@ pipeline {
   
   stages {
     stage('Install') {
-      steps { bat 'npm install' }
+      steps { sh 'npm install' }
     }
 
 
     stage('Static code analysis') {
-        steps { bat 'npm run-script lint' }
+        steps { sh 'npm run-script lint' }
     }
 
     stage('Unit tests') {
-        steps { bat 'npm run-script test' }
+        steps { sh 'npm run-script test' }
     }
 
     // stage('Test') {
     //   parallel {
     //     stage('Static code analysis') {
-    //         steps { bat 'npm run-script lint' }
+    //         steps { sh 'npm run-script lint' }
     //     }
     //     stage('Unit tests') {
-    //         steps { bat 'npm run-script test' }
+    //         steps { sh 'npm run-script test' }
     //     }
     //   }
     // }
 
     stage('Build') {
-      steps { bat 'npm run-script build' }
+      steps { sh 'npm run-script build' }
     }
   }
 }
