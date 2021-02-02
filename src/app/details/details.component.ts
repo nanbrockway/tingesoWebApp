@@ -21,8 +21,8 @@ export class DetailsComponent implements OnInit {
     }
   }
 
-  showMap(lat: any, lng: any) {
-    this.router.navigate(['/maps', lat, lng]);
+  goback(lat: any, lng: any) {
+    this.router.navigate(['list']);
   }
 
 }
